@@ -1,5 +1,5 @@
 
-#to run this: python3 async.py
+#to run this: python3 inputs/text-input.py
 import asyncio
 from playwright.async_api import async_playwright, expect
 
