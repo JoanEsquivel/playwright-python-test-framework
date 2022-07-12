@@ -22,7 +22,7 @@ async def main():
         await expect(page.locator("#doubleClickMessage")).to_have_text("You have done a double click")
         #-Closing browser
         await browser.close()
-        # #- Right Click
+        # #- Right Click - Asking behavior at: https://github.com/microsoft/playwright-python/issues/1426
         # button = page.locator("text=Click Me").nth(1)
         # await button.click(button="right")
         # await page.screenshot(path="doubleClick.png")
