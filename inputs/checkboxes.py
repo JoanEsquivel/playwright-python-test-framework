@@ -8,6 +8,7 @@ async def main():
         context = await browser.new_context()
         await context.tracing.start(screenshots=True, snapshots=True, sources=True)
         page = await context.new_page()
+        
         await page.set_viewport_size({"width": 1800, "height": 1200})
         await page.goto("https://demoqa.com/checkbox")
         #-Actions
