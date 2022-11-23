@@ -15,7 +15,7 @@ async def main():
         await page.check('label[for="tree-node-home"]')
         await page.screenshot(path="screenshots/checkboxes.png")
         #-Assertions
-        await page.is_checked('label[for="tree-node-home"]') is True
+        await expect(page.get_by_label("Home")).to_be_checked()
         await expect(page.locator("#result")).to_have_text("You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile")
         #-Stoping Tracing
         await context.tracing.stop(path = "logs/trace.zip")
